@@ -1,0 +1,5 @@
+# Não publicar arquivos de configuração/backup de banco de dados
+database.php
+**/database.php
+*.sql
+**/*.sql
