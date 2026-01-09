@@ -1,0 +1,39 @@
+.form-body {
+    padding: 0px 50px 10px 50px;
+}
+
+.header {
+    padding: 50px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #29472b;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+.session {
+    margin-top: 20px;
+}
+
+.session p {
+    margin-top: -20px;
+    overflow-wrap: break-word;
+    text-align: justify;
+    color: #29472b;
+}
+
+.required {
+    margin-left: 5px;
+    color: red;
+}
+
+.alert {
+    text-align: center;
+}
+
+.obs {
+    margin-top: -10px;
+    font-size: 12px;
+}
