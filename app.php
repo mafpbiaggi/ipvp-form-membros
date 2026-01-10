@@ -18,6 +18,7 @@ $regras = [
     'nome' => ['required' => true, 'max' => 100],
     'sexo' => ['required' => true],
     'datanascimento' => ['required' => true],
+    'naturalidade' => ['required' => true],
     'rg' => ['required' => true, 'max' => 12],
     'cpf' => ['required' => true, 'max' => 14],
     'estadocivil' => ['required' => true],
