@@ -8,7 +8,7 @@ function validaCampos($dados, $regras) {
             $erros[] = "O campo {$campo} é obrigatório.";
         }
         if (isset($regra['max']) && strlen($dados[$campo]) > $regra['max']) {
-            $erros[] = "O campo {$campo} excede o tamanho máximo.";
+            $erros[] = "O campo {$campo} excede o tamanho máximo ({$regra['max']} caracteres).";
         }
     }
     return $erros;
