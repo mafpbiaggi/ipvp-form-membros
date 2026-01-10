@@ -6,11 +6,18 @@ Este repositório contém arquivos para o sistema de atualização de membros da
 ## Estrutura do Sistema
 ```
 ipvp-form-membros/
-├── app.php
-├── app.js
 ├── index.html
-├── database.php
+├── app.php
 ├── README.md
+├── assets/
+│   ├── css/
+│   │   └── appStyle.css
+│   ├── js/
+│   │   ├── app.js
+│   │   └── mask.js
+│   └── img/
+│       └── logo_branco.svg
+│       └── logo-fundo-branco.png
 ```
 
 ## Dados da Equipe
