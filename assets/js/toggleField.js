@@ -18,7 +18,7 @@ function toggleField(triggerSelector, valuesEnable, targetSelector) {
 
 $('#estadocivil').on('change', function() {
     toggleField('#estadocivil', ['2', '6'], '#datacasamento');
-    toggleField('#estadocivil', ['2', '6'], '#nomeConjuge');
+    toggleField('#estadocivil', ['2', '6'], '#nomeconjuge');
 });
 
 $('#batizado').on('change', function() {
