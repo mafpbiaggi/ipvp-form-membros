@@ -9,8 +9,9 @@ function confirmaEnvio() {
 const formMembro = document.getElementById("formMembro");
 const divAlerta = document.getElementById("divAlerta");
 const msgAlerta = document.getElementById("msgAlerta");
-divAlerta.className = "";
-msgAlerta.innerHTML = "";
+
+if (divAlerta) divAlerta.className = "";
+if (msgAlerta) msgAlerta.innerHTML = "";
 
 if (formMembro) {
     formMembro.addEventListener("submit", async (e) => {
@@ -22,20 +23,26 @@ if (formMembro) {
         e.preventDefault();
         const dadosForm = new FormData(formMembro);
 
-        const dados = await fetch("app.php", {
-            method: "POST",
-            body: dadosForm
-        });
+        try {
+            const dados = await fetch("app.php", {
+                method: "POST",
+                body: dadosForm
+            });
 
-        const resposta = await dados.json();
+            const resposta = await dados.json();
 
-        if (resposta['status']) {
-            divAlerta.className = "alert alert-success";
-            msgAlerta.innerHTML = resposta['msg'];
-            formMembro.reset();
-        } else {
-            divAlerta.className = "alert alert-danger";
-            msgAlerta.innerHTML = resposta['msg'];
+            if (resposta['status']) {
+                if (divAlerta) divAlerta.className = "alert alert-success";
+                if (msgAlerta) msgAlerta.innerHTML = resposta['msg'];
+                formMembro.reset();
+            } else {
+                if (divAlerta) divAlerta.className = "alert alert-danger";
+                if (msgAlerta) msgAlerta.innerHTML = resposta['msg'];
+            }
+            
+        } catch (error) {
+            if (divAlerta) divAlerta.className = "alert alert-danger";
+            if (msgAlerta) msgAlerta.innerHTML = "Erro ao processar envio.<br>Contate o administrador.";
         }
     });
 }
