@@ -8,6 +8,7 @@ Este repositório contém arquivos para o sistema de atualização de membros da
 ipvp-form-membros/
 ├── index.html
 ├── app.php
+├── database-modelo.php
 ├── README.md
 ├── assets/
 │   ├── css/
@@ -19,6 +20,9 @@ ipvp-form-membros/
 │       └── logo_branco.svg
 │       └── logo-fundo-branco.png
 ```
+
+### Observação
+Após adicionar os dados no arquivo _database-modelo.php_, altere o nome do arquivo para _database.php_. 
 
 ## Dados da Equipe
 **Nome**: Marco Aurélio Biaggi ([@mafpbiaggi](https://github.com/mafpbiaggi))  
