@@ -54,7 +54,7 @@ function addMembro($dados) {
         $stmtMemb->bindValue(':nome', trim(mb_strtoupper($dados['nome'])));
         $stmtMemb->bindValue(':sexo', $dados['sexo']);
         $stmtMemb->bindValue(':datanascimento', $dados['datanascimento']);
-        $stmtMemb->bindValue(':naturalidade', trim(mb_strtolower($dados['naturalidade'])));
+        $stmtMemb->bindValue(':naturalidade', trim(mb_strtoupper($dados['naturalidade'])));
         $stmtMemb->bindValue(':email', trim(mb_strtolower($dados['email'])));
         $stmtMemb->bindValue(':cel', $dados['cel']);
         $stmtMemb->bindValue(':fone', $dados['fone']);
