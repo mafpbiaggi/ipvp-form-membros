@@ -31,3 +31,33 @@ img {
 .alert {
     text-align: center;
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .form-body {
+        padding: 0 15px 15px 15px;
+    }
+    .header {
+        padding: 20px 5px;
+        font-size: 1rem;
+    }
+    .session p {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header h3, .header h5 {
+        font-size: 1rem;
+    }
+    .form-body {
+        padding: 0 2vw 10px 2vw;
+    }
+}
