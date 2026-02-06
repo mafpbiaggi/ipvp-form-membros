@@ -1,12 +1,24 @@
-.form-body {
-    padding: 0px 50px 10px 50px;
-}
-
 .header {
     padding: 50px;
     text-align: center;
     color: #ffffff;
     background-color: #29472b;
+}
+
+.form-body {
+    padding: 0px 50px 0px 50px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #29472b;
+}
+
+.footer a {
+    color:#ffffff;
+    text-decoration: none;
 }
 
 img {
@@ -47,17 +59,31 @@ img {
         padding: 0 0 0 100px;
     }
 
+    .footer {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
     .session p {
         font-size: 0.95rem;
     }
 }
 
 @media (max-width: 600px) {
-    .header h3, .header h5 {
+    .header h3 {
         font-size: 1rem;
+    }
+
+    .header h5 {
+        font-size: 0.8rem;
     }
     
     .form-body {
         padding: 0 20px 0 20px;
+    }
+
+    .footer {
+        padding: 20px;
+        font-size: 0.7rem;
     }
 }
