@@ -1,0 +1,43 @@
+# compose: dc-ipvp-atualiza-membros.yaml
+
+networks:
+  atualiza_membros:
+    ipam:
+      config:
+        - subnet: 192.168.3.0/29
+          gateway: 192.168.3.1
+
+services:
+  mariadb_atualiza_membros_ipvp:
+    image: mariadb:latest
+    container_name: mariadb_atualiza_membros_ipvp
+    environment:
+      - TZ=America/Sao_Paulo
+      - MYSQL_ROOT_PASSWORD=SENHA_ROOT
+      - MYSQL_DATABASE=NOME_DA_BASE
+      - MYSQL_USER=NOME_DE_USUÁRIO_MORTAL
+      - MYSQL_PASSWORD=SENHA_USUÁRIO_MORTAL
+    ports:
+      - 3308:3306
+    volumes:
+      - /CAMINHO/DO/DIRETÓRIO/ipvp-atualiza-membros/database:/var/lib/mysql
+    restart: always
+    networks:
+      atualiza_membros:
+        ipv4_address: 192.168.3.2
+
+  app_atualiza_membros:
+    build:
+      context: /CAMINHO/DO/DIRETÓRIO/ipvp-atualiza-membros
+      dockerfile: atualiza_membros.dockerfile
+    container_name: app_atualiza_membros_ipvp
+    volumes:
+        - /CAMINHO/DO/DIRETÓRIO/ipvp-atualiza-membros/data:/var/www/html
+    ports:
+      - 8085:80
+    restart: always
+    networks:
+      atualiza_membros:
+        ipv4_address: 192.168.3.3
+    depends_on:
+      - mariadb_atualiza_membros_ipvp

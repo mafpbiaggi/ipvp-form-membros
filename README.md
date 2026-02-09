@@ -19,10 +19,15 @@ ipvp-form-membros/
 │   └── img/
 │       └── logo_branco.svg
 │       └── logo-fundo-branco.png
+├── docker/
+│   ├── atualiza_membros_ipvp.sql
+│   ├── atualiza_membros.dockerfile
+|   └── dc-atualiza-membros-ipvp.yaml
 ```
 
-### Observação
-Após adicionar os dados no arquivo _database-modelo.php_, altere o nome do arquivo para _database.php_. 
+### Observações
+    1. Após adicionar os dados no arquivo _database-modelo.php_, altere o nome do arquivo para _database.php_.
+    1. O arquivo 'docker/atualiza_membros_ipvp.sql' está vazio e deve ser importado depois da criação dos containers.
 
 ## Dados da Equipe
 **Nome**: Marco Aurélio Biaggi ([@mafpbiaggi](https://github.com/mafpbiaggi))  
