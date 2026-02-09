@@ -27,7 +27,7 @@ ipvp-form-membros/
 
 ### Observações
     1. Após adicionar os dados no arquivo _database-modelo.php_, altere o nome do arquivo para _database.php_.
-    2. O arquivo 'docker/atualiza_membros_ipvp.sql' está vazio e deve ser importado depois da criação dos containers.
+    1. O arquivo 'docker/atualiza_membros_ipvp.sql' está vazio e deve ser importado depois da criação dos containers.
 
 ## Dados da Equipe
 **Nome**: Marco Aurélio Biaggi ([@mafpbiaggi](https://github.com/mafpbiaggi))  
