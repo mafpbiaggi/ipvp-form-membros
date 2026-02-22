@@ -33,7 +33,7 @@ if (empty($_SESSION['csrf_token'])) {
     </div>
 
     <div class="form-body">
-        <form method="POST" id="formMembro">
+        <form method="POST" id="formMembro" class="formMembro">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
             <div class="row justify-content-md-center">
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
@@ -421,7 +421,7 @@ if (empty($_SESSION['csrf_token'])) {
             <div class="row justify-content-md-center">
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div id="divAlerta" role="alert">
-                        <span id="msgAlerta"></span>
+                        <span id="msgAlerta" class="msgAlerta"></span>
                     </div>
                 </div>
             </div>

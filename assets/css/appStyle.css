@@ -9,11 +9,11 @@
     padding: 0px 50px 0px 50px;
 }
 
-#msgAlerta {
+.msgAlerta {
     white-space: pre-line;
 }
 
-#formMembro {
+.formMembro {
     margin-top: 50px;
     margin-bottom: 50px;
 }

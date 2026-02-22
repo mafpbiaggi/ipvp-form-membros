@@ -8,6 +8,6 @@ header("Content-Security-Policy: " .
     "style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " .
     "font-src https://cdnjs.cloudflare.com; " .
     "img-src 'self' data:; " .
-    "connect-src 'self'; " .
+    "connect-src 'self' https://cdn.jsdelivr.net; " .
     "frame-ancestors 'none';"
 );
