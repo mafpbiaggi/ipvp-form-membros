@@ -33,16 +33,16 @@ if (formMembro) {
 
             if (resposta['status']) {
                 if (divAlerta) divAlerta.className = "alert alert-success";
-                if (msgAlerta) msgAlerta.innerHTML = resposta['msg'];
+                if (msgAlerta) msgAlerta.innerText = resposta['msg'];
                 formMembro.reset();
             } else {
                 if (divAlerta) divAlerta.className = "alert alert-danger";
-                if (msgAlerta) msgAlerta.innerHTML = resposta['msg'];
+                if (msgAlerta) msgAlerta.innerText = resposta['msg'];
             }
             
         } catch (error) {
             if (divAlerta) divAlerta.className = "alert alert-danger";
-            if (msgAlerta) msgAlerta.innerHTML = "Erro ao processar envio.<br>Contate o administrador.";
+            if (msgAlerta) msgAlerta.innerText = "Erro ao processar envio.<br>Contate o administrador.";
         }
     });
 }

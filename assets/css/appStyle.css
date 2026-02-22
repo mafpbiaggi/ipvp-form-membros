@@ -9,6 +9,10 @@
     padding: 0px 50px 0px 50px;
 }
 
+#msgAlerta {
+    white-space: pre-line;
+}
+
 .footer {
     padding: 20px;
     text-align: center;

@@ -172,7 +172,7 @@ foreach ($regras as $campo => $regra) {
 $erros = validaCampos($dados, $regras);
 
 if ($erros) {
-   echo json_encode(['status' => false, 'msg' => implode('<br>', $erros)]);
+   echo json_encode(['status' => false, 'msg' => implode("\n", $erros)]);
    exit;
 }
 
