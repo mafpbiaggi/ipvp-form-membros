@@ -1,3 +1,14 @@
+<?php
+ini_set('session.cookie_httponly', 1);
+ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.use_strict_mode', 1);
+
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,6 +33,7 @@
 
     <div class="form-body">
         <form method="POST" id="formMembro" style="margin-top: 50px; margin-bottom: 50px;">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
             <div class="row justify-content-md-center">
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div class="session">

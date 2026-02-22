@@ -1,5 +1,21 @@
 <?php
+ini_set('session.cookie_httponly', 1);
+ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.use_strict_mode', 1);
+
+session_start();
 require_once 'database.php';
+
+//Validação CSRF
+if (
+    empty($_POST['csrf_token']) ||
+    !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
+) {
+    echo json_encode(['status' => false, 'msg' => 'Requisição inválida. Recarregue a página e tente novamente.']);
+    exit;
+}
+
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32)); 
 
 //Função para validação de campos
 function validaCampos($dados, $regras) {
@@ -12,6 +28,7 @@ function validaCampos($dados, $regras) {
             $erros[] = "O campo {$campo} excede o tamanho máximo ({$regra['max']} caracteres).";
         }
     }
+
     return $erros;
 }
 

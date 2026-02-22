@@ -17,8 +17,6 @@ services:
       - MYSQL_DATABASE=NOME_DA_BASE
       - MYSQL_USER=NOME_DE_USUÁRIO_MORTAL
       - MYSQL_PASSWORD=SENHA_USUÁRIO_MORTAL
-    ports:
-      - 3308:3306
     volumes:
       - /CAMINHO/DO/DIRETÓRIO/ipvp-atualiza-membros/database:/var/lib/mysql
     restart: always
