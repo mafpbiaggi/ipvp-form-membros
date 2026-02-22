@@ -118,7 +118,7 @@ function addMembro($dados) {
         return ['status' => true, 'msg' => "Dados enviados com sucesso."];
     
     } catch (PDOException $err) {
-        return ['status' => false, 'msg' => "Não foi possível finalizar o cadastramento.<br>Contate o administrador."];
+        return ['status' => false, 'msg' => "Não foi possível finalizar o cadastramento.\nContate o administrador."];
     }
 }
 

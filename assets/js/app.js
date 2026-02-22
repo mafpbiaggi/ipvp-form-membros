@@ -11,7 +11,7 @@ const divAlerta = document.getElementById("divAlerta");
 const msgAlerta = document.getElementById("msgAlerta");
 
 if (divAlerta) divAlerta.className = "";
-if (msgAlerta) msgAlerta.innerHTML = "";
+if (msgAlerta) msgAlerta.innerText = "";
 
 if (formMembro) {
     formMembro.addEventListener("submit", async (e) => {
