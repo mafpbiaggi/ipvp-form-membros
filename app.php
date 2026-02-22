@@ -4,6 +4,7 @@ ini_set('session.cookie_samesite', 'Strict');
 ini_set('session.use_strict_mode', 1);
 
 session_start();
+require_once 'assets/sec/headers.php';
 require_once 'database.php';
 
 //Validação CSRF
@@ -161,13 +162,14 @@ $regras = [
 
 //Recebe os dados do formulário.
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$erros = validaCampos($dados, $regras);
 
 foreach ($regras as $campo => $regra) {
     if (!isset($dados[$campo])) {
         $dados[$campo] = '';
     }
 }
+
+$erros = validaCampos($dados, $regras);
 
 if ($erros) {
    echo json_encode(['status' => false, 'msg' => implode('<br>', $erros)]);

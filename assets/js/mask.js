@@ -34,3 +34,22 @@ function mask(input, type) {
 
     input.value = value;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const campos = [
+        { id: 'cpf',  tipo: 'CPF' },
+        { id: 'rg',   tipo: 'RG'  },
+        { id: 'cep',  tipo: 'CEP' },
+        { id: 'cel',  tipo: 'CEL' },
+        { id: 'fone', tipo: 'TEL' },
+    ];
+
+    campos.forEach(function ({ id, tipo }) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('input', function () {
+                mask(this, tipo);
+            });
+        }
+    });
+});

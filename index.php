@@ -4,6 +4,7 @@ ini_set('session.cookie_samesite', 'Strict');
 ini_set('session.use_strict_mode', 1);
 
 session_start();
+require_once 'assets/sec/headers.php';
 
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -147,7 +148,7 @@ if (empty($_SESSION['csrf_token'])) {
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div class="input-group input-group-sm mb-3">
                         <label class="input-group-text" for="cep">CEP:<span class="required">*</span></label>
-                        <input class="form-control" name="cep" id="cep" type="text" placeholder="Somente números" oninput="mask(this, 'CEP')" maxlength="9" required />
+                        <input class="form-control" name="cep" id="cep" type="text" placeholder="Somente números" maxlength="9" required />
                     </div>
                 </div>
             </div>
@@ -214,7 +215,7 @@ if (empty($_SESSION['csrf_token'])) {
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div class="input-group input-group-sm mb-3">
                         <label class="input-group-text" for="cel">Celular:</label>
-                        <input class="form-control" name="cel" id="cel" type="text" placeholder="Somente números com DDD" oninput="mask(this, 'CEL')" maxlength="15" />
+                        <input class="form-control" name="cel" id="cel" type="text" placeholder="Somente números com DDD" maxlength="15" />
                     </div>
                 </div>
             </div>
@@ -223,7 +224,7 @@ if (empty($_SESSION['csrf_token'])) {
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div class="input-group input-group-sm mb-3">
                         <label class="input-group-text" for="fone">Telefone Fixo:</label>
-                        <input class="form-control" name="fone" id="fone" type="text" placeholder="Somente números com DDD" oninput="mask(this, 'TEL')" maxlength="14" />
+                        <input class="form-control" name="fone" id="fone" type="text" placeholder="Somente números com DDD" maxlength="14" />
                     </div>
                 </div>
             </div>
@@ -236,7 +237,7 @@ if (empty($_SESSION['csrf_token'])) {
                     </div>
                     <div class="input-group input-group-sm mb-3">
                         <label class="input-group-text" for="rg">RG:<span class="required">*</span></label>
-                        <input class="form-control" name="rg" id="rg" type="text" placeholder="Somente números" oninput="mask(this, 'RG')" maxlength="12" required />
+                        <input class="form-control" name="rg" id="rg" type="text" placeholder="Somente números" maxlength="12" required />
                     </div>
                 </div>
             </div>
@@ -245,7 +246,7 @@ if (empty($_SESSION['csrf_token'])) {
                 <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                     <div class="input-group input-group-sm mb-3">
                         <label class="input-group-text" for="cpf">CPF:<span class="required">*</span></label>
-                        <input class="form-control" name="cpf" id="cpf" type="text" placeholder="Somente números" oninput="mask(this, 'CPF')" maxlength="14" required />
+                        <input class="form-control" name="cpf" id="cpf" type="text" placeholder="Somente números" maxlength="14" required />
                     </div>
                 </div>
             </div>
