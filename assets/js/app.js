@@ -42,7 +42,7 @@ if (formMembro) {
             
         } catch (error) {
             if (divAlerta) divAlerta.className = "alert alert-danger";
-            if (msgAlerta) msgAlerta.innerText = "Erro ao processar envio.<br>Contate o administrador.";
+            if (msgAlerta) msgAlerta.innerText = "Erro ao processar envio.\nContate o administrador.";
         }
     });
 }
